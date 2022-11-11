@@ -24,4 +24,3 @@ class MelihatInformasiPajakKendaraanFactory extends PerhitunganPajakKendaraanAbs
     }
    
 }
-?>
