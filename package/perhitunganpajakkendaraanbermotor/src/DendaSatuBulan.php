@@ -1,6 +1,6 @@
 <?php
 
-class MenghitungDendaSatuBulan implements Denda
+class DendaSatuBulan implements Denda
 {
   //  PKB x 25%
 }

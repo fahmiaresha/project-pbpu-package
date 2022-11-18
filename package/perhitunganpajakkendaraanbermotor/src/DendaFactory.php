@@ -1,5 +1,5 @@
 <?php
 
-class MenghitungDendaFactory extends PerhitunganPajakKendaraanAbstractFactory{
-
+class DendaFactory extends PajakKendaraanAbstractFactory
+{
 }

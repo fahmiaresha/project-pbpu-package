@@ -1,5 +1,5 @@
 <?php
 
-abstract class PerhitunganPajakKendaraanAbstractFactory
+abstract class PajakKendaraanAbstractFactory
 {
 }
