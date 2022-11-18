@@ -1,5 +1,6 @@
 <?php
 
-abstract class PajakKendaraanAbstractFactory
+interface PajakKendaraanAbstractFactory
 {
+  public function createDenda(): Denda;
 }

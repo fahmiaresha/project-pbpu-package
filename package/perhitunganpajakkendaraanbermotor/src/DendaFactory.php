@@ -1,5 +1,9 @@
 <?php
 
-class DendaFactory extends PajakKendaraanAbstractFactory
+class DendaFactory implements PajakKendaraanAbstractFactory
 {
+  public function createDenda(): Denda
+  {
+    return new DendaSatuBulan();
+  }
 }
