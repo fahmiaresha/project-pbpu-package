@@ -1,0 +1,15 @@
+{
+    "name": "f.a/perhitunganpajakkendaraanbermotor",
+    "description": "Perhitungan Pajak Kendaraan Bermotor",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FA\\Perhitunganpajakkendaraanbermotor\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "nesbot/carbon": "^2.16"
+    }
+}
