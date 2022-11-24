@@ -29,8 +29,3 @@ Route::get('/informasi-pajak/{parameter}', function () {
     }
 });
 
-
-
-
-
-
