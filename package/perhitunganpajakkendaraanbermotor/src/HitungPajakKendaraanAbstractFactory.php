@@ -2,6 +2,6 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-class PerhitunganPajakKendaraanAbstractFactory{
+class HitungPajakKendaraanAbstractFactory{
     
 }
