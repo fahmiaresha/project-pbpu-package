@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Route::get('/informasi-pajak/{parameter}', function () {
     $param = request('parameter');
-    $MelihatInformasiPajakKendaraanFactory = new \PerhitunganPajakKendaranBermotor\MelihatInformasiPajakKendaraanFactory();
-    $result = $MelihatInformasiPajakKendaraanFactory->getInformasi($param);
+    InformasiPajakKendaraanFactory  = new \PerhitunganPajakKendaranBermotor\InformasiPajakKendaraanFactory ();
+    $result = InformasiPajakKendaraanFactory ->getInformasi($param);
     if($result != null){
         $result->getInformasiPajak();
     }
