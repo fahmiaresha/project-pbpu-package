@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/informasi-pajak/{parameter}', function () {
+    $param = request('parameter');
+    $MelihatInformasiPajakKendaraanFactory = new \PerhitunganPajakKendaranBermotor\MelihatInformasiPajakKendaraanFactory();
+    $result = $MelihatInformasiPajakKendaraanFactory->getInformasi($param);
+    if($result != null){
+        $result->getInformasiPajak();
+    }
+    else{
+        echo "Informasi tidak ditemukan";
+    }
+});
+

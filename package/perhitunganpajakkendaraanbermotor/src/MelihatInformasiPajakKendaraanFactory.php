@@ -1,7 +1,13 @@
 <?php
 
-class MelihatInformasiPajakKendaraanFactory extends PajakKendaraanAbstractFactory
+namespace PerhitunganPajakKendaranBermotor;
+
+class MelihatInformasiPajakKendaraanFactory extends PerhitunganPajakKendaraanAbstractFactory
 {
+
+  public function __construct()
+  {
+  }
 
   // public function __construct() {
   // }

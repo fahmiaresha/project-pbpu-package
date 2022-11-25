@@ -1,6 +1,8 @@
 <?php
 
-class InformasiBiayaAdministrasi implements Informasi {
+namespace PerhitunganPajakKendaranBermotor;
+
+class InformasiBiayaAdministrasi implements Informasi{
     private $InformasiBiayaAdministrasi;
 
     public function __construct() {

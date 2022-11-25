@@ -1,5 +1,7 @@
 <?php
 
+namespace PerhitunganPajakKendaranBermotor;
+
 class InformasiPresentasePajak implements Informasi {
     private $InformasiPresentasePajak;
 
