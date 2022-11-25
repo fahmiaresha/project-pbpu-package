@@ -2,7 +2,7 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-class MelihatInformasiPajakKendaraanFactory extends PerhitunganPajakKendaraanAbstractFactory
+class InformasiPajakKendaraanFactory extends HitungPajakKendaraanAbstractFactory
 {
 
   public function __construct()
