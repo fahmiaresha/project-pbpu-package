@@ -2,5 +2,9 @@
 
 interface PajakKendaraanAbstractFactory
 {
-  public function createDenda(): Denda;
+  public function createDendaSatuBulan(): Denda;
+  public function createDendaDuaBulan(): Denda;
+  public function createDendaEnamBulan(): Denda;
+  public function createDendaSatuTahun(): Denda;
+  public function createDendaDuaTahun(): Denda;
 }

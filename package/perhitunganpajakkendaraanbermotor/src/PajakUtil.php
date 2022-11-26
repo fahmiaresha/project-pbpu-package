@@ -16,5 +16,14 @@
         public static function hitungBBNKBMotor(int $hargaJualMotor): float {
             return $hargaJualMotor * 0.02;
         }
+
+        public static function swdklljMotor(): float
+        {
+          return 80000;
+        }
+
+        public function swdklljMobil(): float
+        {
+          return 140000;
+        }
     }
-?>

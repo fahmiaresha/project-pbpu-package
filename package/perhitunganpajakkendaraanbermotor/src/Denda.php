@@ -2,5 +2,5 @@
 
 interface Denda
 {
-  public function HitungDenda(String $tanggal): String;
+  public function HitungDenda(float $nilaiJualKendaraan): string;
 }
