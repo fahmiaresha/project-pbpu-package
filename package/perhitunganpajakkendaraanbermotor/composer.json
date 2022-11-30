@@ -8,8 +8,5 @@
             "FA\\Perhitunganpajakkendaraanbermotor\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "require": {
-        "nesbot/carbon": "^2.16"
-    }
+    "minimum-stability": "dev"
 }

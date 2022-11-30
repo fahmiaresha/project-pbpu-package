@@ -1,25 +1,29 @@
-<?php 
+<?php
 
-class MenghitungPajakSatuTahunanMotor {
-    private $jumlahPajak;
-    private $nilaiJualMotor;
-    private $swdkllj;
-    private $biayaAdministrasi;
+namespace PerhitunganPajakKendaranBermotor;
 
-    public function __construct(float $nilaiJualMotor, float $swdkllj, float $biayaAdministrasi) {
-        $this->nilaiJualMotor = $nilaiJualMotor;
-        $this->swdkllj = $swdkllj;
-        $this->biayaAdministrasi = $biayaAdministrasi;
-    }
+class PajakSatuTahunanMotor implements Pajak
+{
+  private $jumlahPajak;
+  private $nilaiJualMotor;
+  private $swdkllj;
+  private $biayaAdministrasi;
 
-    public function setPajak() {
-        $pkb = PajakUtil::hitungPKBMotor($this -> nilaiJualMotor);
-        $this -> jumlahPajak = $pkb + $this -> swdkllj + $this -> biayaAdministrasi;
-    }
+  public function __construct(float $nilaiJualMotor, float $swdkllj, float $biayaAdministrasi)
+  {
+    $this->nilaiJualMotor = $nilaiJualMotor;
+    $this->swdkllj = $swdkllj;
+    $this->biayaAdministrasi = $biayaAdministrasi;
+  }
 
-    public function getJumlahPajak(): float {
-        return $this->jumlahPajak;
-    }
+  public function setPajak()
+  {
+    $pkb = PajakUtil::hitungPKBMotor($this->nilaiJualMotor);
+    $this->jumlahPajak = $pkb + $this->swdkllj + $this->biayaAdministrasi;
+  }
+
+  public function getJumlahPajak(): float
+  {
+    return $this->jumlahPajak;
+  }
 }
-
-?>

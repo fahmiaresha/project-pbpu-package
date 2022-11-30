@@ -1,7 +1,8 @@
-<?php 
+<?php
 
-interface Pajak {
-    public function getJumlahPajak(): float;
+namespace PerhitunganPajakKendaranBermotor;
+
+interface Pajak
+{
+  public function getJumlahPajakTahunPertama(): float;
 }
-
-?>

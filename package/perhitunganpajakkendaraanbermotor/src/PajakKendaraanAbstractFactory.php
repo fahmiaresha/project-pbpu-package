@@ -1,10 +1,12 @@
 <?php
 
+use PerhitunganPajakKendaranBermotor\Informasi;
+
 interface PajakKendaraanAbstractFactory
 {
-  public function createDendaSatuBulan(): Denda;
-  public function createDendaDuaBulan(): Denda;
-  public function createDendaEnamBulan(): Denda;
-  public function createDendaSatuTahun(): Denda;
-  public function createDendaDuaTahun(): Denda;
+  public function informasiBiayaAdministrasi(): Informasi;
+  public function informasiPresentasePajak(): Informasi;
+  public function pajakTahunPertama(): Pajak;
+  // public function getPajak(): Pajak;
+  // public function getDenda(): Denda;
 }
