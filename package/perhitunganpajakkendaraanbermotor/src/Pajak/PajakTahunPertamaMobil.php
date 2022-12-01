@@ -15,12 +15,22 @@ class PajakTahunPertamaMobil implements Pajak
     $this->biayaAdministrasiPenerbitanSTNK = BiayaAdministrasi::penerbitanStnkMobil();
   }
 
-  public function getJumlahPajakTahunPertama(float $nilaiJualKendaraan)
+  public function getPajakTahunPertama(float $nilaiJualKendaraan)
   {
     $bbnkb = PajakUtil::hitungBBNKBMobil($nilaiJualKendaraan);
     $pkb = PajakUtil::hitungPKBMobil($nilaiJualKendaraan);
-    $jumlahPajak = $this->jumlahPajak = $bbnkb + $pkb + $this->swdkllj + $this->biayaAdministrasi + $this->biayaAdministrasiPenerbitanSTNK;
+    $jumlahPajak = $bbnkb + $pkb + $this->swdkllj + $this->biayaAdministrasi + $this->biayaAdministrasiPenerbitanSTNK;
 
     return $jumlahPajak;
+  }
+
+  public function getPajakSatuTahunan(float $nilaiJualKendaraan)
+  {
+    return null;
+  }
+
+  public function getPajakLimaTahunan(float $nilaiJualKendaraan)
+  {
+    return null;
   }
 }

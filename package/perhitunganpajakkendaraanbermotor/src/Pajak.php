@@ -4,5 +4,9 @@ namespace PerhitunganPajakKendaranBermotor;
 
 interface Pajak
 {
-  public function getJumlahPajakTahunPertama(float $nilaiJualKendaraan);
+  public function getPajakTahunPertama(float $nilaiJualKendaraan);
+
+  public function getPajakSatuTahunan(float $nilaiJualKendaraan);
+
+  public function getPajakLimaTahunan(float $nilaiJualKendaraan);
 }

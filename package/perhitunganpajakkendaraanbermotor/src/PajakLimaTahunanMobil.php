@@ -1,32 +1,40 @@
-<?php 
+<?php
 
-class MenghitungPajakLimaTahunanMobil {
-    private $jumlahPajak;
-    private $nilaiJualKendaraan;
-    private $swdkllj;
-    private $biayaAdministrasi;
-    private $biayaAdministrasiPenerbitanSTNK;
-    private $biayaAdministrasiPengesahanSTNK;
-    private $biayaAdministrasiTNKB;
+namespace PerhitunganPajakKendaranBermotor;
 
-    // constructor
-    public function __construct(float $nilaiJualKendaraan, float $swdkllj, float $biayaAdministrasi, float $biayaAdministrasiPenerbitanSTNK, float $biayaAdministrasiPengesahanSTNK, float $biayaAdministrasiTNKB) {
-        $this->nilaiJualKendaraan = $nilaiJualKendaraan;
-        $this->swdkllj = $swdkllj;
-        $this->biayaAdministrasi = $biayaAdministrasi;
-        $this->biayaAdministrasiPenerbitanSTNK = $biayaAdministrasiPenerbitanSTNK;
-        $this->biayaAdministrasiPengesahanSTNK = $biayaAdministrasiPengesahanSTNK;
-        $this->biayaAdministrasiTNKB = $biayaAdministrasiTNKB;
-    }    
+class MenghitungPajakLimaTahunanMobil implements Pajak
+{
+  private $swdkllj;
+  private $biayaAdministrasi;
+  private $biayaAdministrasiPenerbitanSTNK;
+  private $biayaAdministrasiPengesahanSTNK;
+  private $biayaAdministrasiTNKB;
 
-    public function setPajak() {
-        $pkb = PajakUtil::hitungPKBMobil($this -> nilaiJualKendaraan);
-        $this -> jumlahPajak = $pkb + $this -> swdkllj + $this -> biayaAdministrasi + $this -> biayaAdministrasiPenerbitanSTNK + $this -> biayaAdministrasiPengesahanSTNK + $this -> biayaAdministrasiTNKB;
-    }
+  // constructor
+  public function __construct()
+  {
+    $this->swdkllj = BiayaAdministrasi::swdklljMobil();
+    $this->biayaAdministrasi = BiayaAdministrasi::administrasiMobil();
+    $this->biayaAdministrasiPenerbitanSTNK = BiayaAdministrasi::penerbitanStnkMobil();
+    $this->biayaAdministrasiPengesahanSTNK = BiayaAdministrasi::pengesahanStnkMobil();
+    $this->biayaAdministrasiTNKB = BiayaAdministrasi::penerbitanTnkbMobil();
+  }
 
-    public function getJumlahPajak(): float {
-        return $this->jumlahPajak;
-    }
+  public function getPajakLimaTahunan(float $nilaiJualKendaraan)
+  {
+    $pkb = PajakUtil::hitungPKBMotor($this->nilaiJualMotor);
+    $jumlahPajak = $pkb + $this->swdkllj + $this->biayaAdministrasi + $this->biayaAdministrasiPenerbitanSTNK + $this->biayaAdministrasiPengesahanSTNK + $this->biayaAdministrasiTNKB;
+
+    return $jumlahPajak;
+  }
+
+  public function getPajakTahunPertama(float $nilaiJualKendaraan)
+  {
+    return null;
+  }
+
+  public function getPajakSatuTahunan(float $nilaiJualKendaraan)
+  {
+    return null;
+  }
 }
-
-?>
