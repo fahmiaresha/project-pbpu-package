@@ -1,5 +1,7 @@
 <?php
 
+namespace PerhitunganPajakKendaranBermotor;
+
 use PerhitunganPajakKendaranBermotor\Informasi;
 use PerhitunganPajakKendaranBermotor\InformasiBiayaAdministrasiMobil;
 use PerhitunganPajakKendaranBermotor\InformasiPresentasePajakMobil;

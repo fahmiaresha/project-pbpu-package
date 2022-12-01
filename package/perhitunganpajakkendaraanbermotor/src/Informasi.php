@@ -4,7 +4,7 @@ namespace PerhitunganPajakKendaranBermotor;
 
 interface Informasi
 {
-  public function getInformasiBiayaAdministrasi(): string;
+  public function getInformasiBiayaAdministrasi();
 
-  public function getInformasiPresentasePajak(): string;
+  public function getInformasiPresentasePajak();
 }

@@ -1,6 +1,9 @@
 <?php
 
+namespace PerhitunganPajakKendaranBermotor;
+
 use PerhitunganPajakKendaranBermotor\Informasi;
+use PerhitunganPajakKendaranBermotor\Pajak;
 
 interface PajakKendaraanAbstractFactory
 {

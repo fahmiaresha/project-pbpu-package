@@ -4,29 +4,23 @@ namespace PerhitunganPajakKendaranBermotor;
 
 class PajakTahunPertamaMotor implements Pajak
 {
-  private $jumlahPajak;
-  private $nilaiJualMotor;
   private $swdkllj;
   private $biayaAdministrasi;
   private $biayaAdministrasiPenerbitanSTNK;
 
-  public function __construct(float $nilaiJualMotor, float $swdkllj, float $biayaAdministrasi, float $biayaAdministrasiPenerbitanSTNK)
+  public function __construct()
   {
-    $this->nilaiJualMotor = $nilaiJualMotor;
-    $this->swdkllj = $swdkllj;
-    $this->biayaAdministrasi = $biayaAdministrasi;
-    $this->biayaAdministrasiPenerbitanSTNK = $biayaAdministrasiPenerbitanSTNK;
+    $this->swdkllj = BiayaAdministrasi::swdklljMotor();
+    $this->biayaAdministrasi = BiayaAdministrasi::administrasiMotor();
+    $this->biayaAdministrasiPenerbitanSTNK = BiayaAdministrasi::penerbitanStnkMotor();
   }
 
-  public function setPajakTahunPertama()
+  public function getJumlahPajakTahunPertama(float $nilaiJualKendaraan)
   {
-    $bbnkb = PajakUtil::hitungBBNKBMotor($this->nilaiJualMotor);
-    $pkb = PajakUtil::hitungPKBMotor($this->nilaiJualMotor);
-    $this->jumlahPajak = $bbnkb + $pkb + $this->swdkllj + $this->biayaAdministrasi + $this->biayaAdministrasiPenerbitanSTNK;
-  }
+    $bbnkb = PajakUtil::hitungBBNKBMotor($nilaiJualKendaraan);
+    $pkb = PajakUtil::hitungPKBMotor($nilaiJualKendaraan);
+    $jumlahPajak = $this->jumlahPajak = $bbnkb + $pkb + $this->swdkllj + $this->biayaAdministrasi + $this->biayaAdministrasiPenerbitanSTNK;
 
-  public function getJumlahPajak(): float
-  {
-    return $this->jumlahPajak;
+    return $jumlahPajak;
   }
 }
