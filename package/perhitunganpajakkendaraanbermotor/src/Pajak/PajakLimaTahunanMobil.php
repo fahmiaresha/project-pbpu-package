@@ -2,7 +2,7 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-class MenghitungPajakLimaTahunanMobil implements Pajak
+class PajakLimaTahunanMobil implements Pajak
 {
   private $swdkllj;
   private $biayaAdministrasi;

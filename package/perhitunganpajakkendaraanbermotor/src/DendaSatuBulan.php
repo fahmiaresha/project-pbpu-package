@@ -1,16 +1,8 @@
 <?php
 
-class DendaSatuBulan implements Denda
+namespace PerhitunganPajakKendaranBermotor;
+
+interface DendaSatuBulan
 {
-
-  public function HitungDenda(float $nilaiJualKendaraan): string
-  {
-    $pkb = PajakUtil::hitungPKBMotor($nilaiJualKendaraan);
-
-    $totalDenda = $pkb * 0.25;
-
-    $formatText = number_format($totalDenda);
-
-    return $formatText;
-  }
+  public function getDendaSatuBulan(float $nilaiJualKendaraan);
 }

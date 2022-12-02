@@ -7,10 +7,19 @@ use PerhitunganPajakKendaranBermotor\Pajak;
 
 interface PajakKendaraanAbstractFactory
 {
+  // Informasi
   public function informasiBiayaAdministrasi(): Informasi;
   public function informasiPresentasePajak(): Informasi;
+
+  // Pajak
   public function pajakTahunPertama(): Pajak;
   public function pajakSatuTahun(): Pajak;
-  // public function getPajak(): Pajak;
-  // public function getDenda(): Denda;
+  public function pajakLimaTahun(): Pajak;
+
+  // Denda
+  public function dendaSatuBulan(): DendaSatuBulan;
+  public function dendaDuaBulan(): DendaDuaBulan;
+  public function dendaEnamBulan(): DendaEnamBulan;
+  public function dendaSatuTahun(): DendaSatuTahun;
+  public function dendaDuaTahun(): DendaDuaTahun;
 }

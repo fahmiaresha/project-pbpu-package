@@ -2,13 +2,9 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-use PerhitunganPajakKendaranBermotor\Informasi;
-use PerhitunganPajakKendaranBermotor\InformasiBiayaAdministrasiMotor;
-use PerhitunganPajakKendaranBermotor\InformasiPresentasePajakMotor;
-use PerhitunganPajakKendaranBermotor\PajakTahunPertamaMotor;
-
 class MotorFactory implements PajakKendaraanAbstractFactory
 {
+  // Informasi
   public function informasiBiayaAdministrasi(): Informasi
   {
     return new InformasiBiayaAdministrasiMotor();
@@ -19,6 +15,7 @@ class MotorFactory implements PajakKendaraanAbstractFactory
     return new InformasiPresentasePajakMotor();
   }
 
+  // Pajak
   public function pajakTahunPertama(): Pajak
   {
     return new PajakTahunPertamaMotor();
@@ -29,13 +26,34 @@ class MotorFactory implements PajakKendaraanAbstractFactory
     return new PajakSatuTahunanMotor();
   }
 
-  // public function getPajak(): Pajak
-  // {
-  //   return new PajakPertamaMotor();
-  // }
+  public function pajakLimaTahun(): Pajak
+  {
+    return new PajakLimaTahunanMotor();
+  }
 
-  // public function getDenda(): Denda
-  // {
-  //   return new DendaSatuBulanMotor();
-  // }
+  // Denda
+  public function dendaSatuBulan(): DendaSatuBulan
+  {
+    return new DendaSatuBulanMotor();
+  }
+
+  public function dendaDuaBulan(): DendaDuaBulan
+  {
+    return new DendaDuaBulanMotor();
+  }
+
+  public function dendaEnamBulan(): DendaEnamBulan
+  {
+    return new DendaEnamBulanMotor();
+  }
+
+  public function dendaSatuTahun(): DendaSatuTahun
+  {
+    return new DendaSatuTahunMotor();
+  }
+
+  public function dendaDuaTahun(): DendaDuaTahun
+  {
+    return new DendaDuaTahunMotor();
+  }
 }

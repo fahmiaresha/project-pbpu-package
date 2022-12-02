@@ -1,17 +1,8 @@
 <?php
 
-class DendaSatuTahun implements Denda
+namespace PerhitunganPajakKendaranBermotor;
+
+interface DendaSatuTahun
 {
-  public function HitungDenda(float $nilaiJualKendaraan): string
-  {
-
-    $pkb = PajakUtil::hitungPKBMotor($nilaiJualKendaraan);
-    $swdkllj = PajakUtil::swdklljMotor();
-
-    $totalDenda = ((($pkb * 0.25) * 12) / 12) + $swdkllj;
-
-    $formatText = number_format($totalDenda);
-
-    return $formatText;
-  }
+  public function getDendaSatuTahun(float $nilaiJualKendaraan);
 }
