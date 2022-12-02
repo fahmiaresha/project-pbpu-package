@@ -28,6 +28,9 @@ Route::get('/informasi-motor/{parameter}', function () {
         $result = $motor->informasiPresentasePajak();
         $result->getInformasiPresentasePajak();
     }
+    else{
+        echo "Informasi tidak ditemukan";
+    }
 });
 
 Route::get('/informasi-mobil/{parameter}', function () {
