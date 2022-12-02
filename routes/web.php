@@ -17,12 +17,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/informasi-pajak/{parameter}', function () {
+Route::get('/informasi-motor/{parameter}', function () {
     $param = request('parameter');
-    $InformasiPajakKendaraanFactory  = new \PerhitunganPajakKendaranBermotor\InformasiPajakKendaraanFactory();
-    $result = $InformasiPajakKendaraanFactory ->getInformasi($param);
-    if($result != null){
-        $result->getInformasiPajak();
+    $motor = new PerhitunganPajakKendaranBermotor\MotorFactory();
+    if($param=="administrasi"){
+        $result = $motor->informasiBiayaAdministrasi();
+        $result->getInformasiBiayaAdministrasi();       
+    }
+    elseif($param=="presentase"){
+        $result = $motor->informasiPresentasePajak();
+        $result->getInformasiPresentasePajak();
+    }
+});
+
+Route::get('/informasi-mobil/{parameter}', function () {
+    $param = request('parameter');
+    $mobil = new PerhitunganPajakKendaranBermotor\MobilFactory();
+    if($param=="administrasi"){
+        $result = $mobil->informasiBiayaAdministrasi();
+        $result->getInformasiBiayaAdministrasi();       
+    }
+    elseif($param=="presentase"){
+        $result = $mobil->informasiPresentasePajak();
+        $result->getInformasiPresentasePajak();
     }
     else{
         echo "Informasi tidak ditemukan";
