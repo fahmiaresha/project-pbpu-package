@@ -3,7 +3,7 @@
 namespace PerhitunganPajakKendaranBermotor;
 
 // Informasi
-require "Informasi/InformasiBiayaAdministrasiMobil.php.php";
+require "Informasi/InformasiBiayaAdministrasiMobil.php";
 require "Informasi/InformasiPresentasePajakMobil.php";
 
 // Pajak
