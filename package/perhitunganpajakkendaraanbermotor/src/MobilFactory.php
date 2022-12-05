@@ -2,6 +2,23 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
+// Informasi
+require "Informasi/InformasiBiayaAdministrasiMobil.php.php";
+require "Informasi/InformasiPresentasePajakMobil.php";
+
+// Pajak
+require "Pajak/PajakTahunPertamaMobil.php";
+require "Pajak/PajakSatuTahunanMobil.php";
+require "Pajak/PajakLimaTahunanMobil.php";
+
+// Denda
+require "Denda/DendaSatuBulanMobil.php";
+require "Denda/DendaDuaBulanMobil.php";
+require "Denda/DendaEnamBulanMobil.php";
+require "Denda/DendaSatuTahunMobil.php";
+require "Denda/DendaDuaTahunMobil.php";
+
+
 class MobilFactory implements PajakKendaraanAbstractFactory
 {
   // Infotmasi

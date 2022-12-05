@@ -14,38 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
-Route::get('/informasi-motor/{parameter}', function () {
-    $param = request('parameter');
-    $motor = new PerhitunganPajakKendaranBermotor\MotorFactory();
-    if($param=="administrasi"){
-        $result = $motor->informasiBiayaAdministrasi();
-        $result->getInformasiBiayaAdministrasi();       
-    }
-    elseif($param=="presentase"){
-        $result = $motor->informasiPresentasePajak();
-        $result->getInformasiPresentasePajak();
-    }
-    else{
-        echo "Informasi tidak ditemukan";
-    }
+Route::get('/informasi-biaya-administrasi/{parameter}', function () {
+  $param = request('parameter');
+  if ($param == "motor") {
+    $informasi = PerhitunganPajakKendaranBermotor\PajakKendaraan::informasiBiayaAdministrasi($param);
+  } else if ($param == "mobil") {
+    $informasi = PerhitunganPajakKendaranBermotor\PajakKendaraan::informasiBiayaAdministrasi($param);
+  }
+
+  echo $informasi;
 });
 
-Route::get('/informasi-mobil/{parameter}', function () {
-    $param = request('parameter');
-    $mobil = new PerhitunganPajakKendaranBermotor\MobilFactory();
-    if($param=="administrasi"){
-        $result = $mobil->informasiBiayaAdministrasi();
-        $result->getInformasiBiayaAdministrasi();       
-    }
-    elseif($param=="presentase"){
-        $result = $mobil->informasiPresentasePajak();
-        $result->getInformasiPresentasePajak();
-    }
-    else{
-        echo "Informasi tidak ditemukan";
-    }
+Route::get('/informasi-presentase-pajak/{parameter}', function () {
+  $param = request('parameter');
+  if ($param == "motor") {
+    $informasi = PerhitunganPajakKendaranBermotor\PajakKendaraan::informasiPresentasePajak($param);
+  } else if ($param == "mobil") {
+    $informasi = PerhitunganPajakKendaranBermotor\PajakKendaraan::informasiPresentasePajak($param);
+  }
+
+  echo $informasi;
 });
 
+Route::get('/pajak', function () {
+  $motor = PerhitunganPajakKendaranBermotor\PajakKendaraan::denda(5000);
+
+  echo $motor;
+});
