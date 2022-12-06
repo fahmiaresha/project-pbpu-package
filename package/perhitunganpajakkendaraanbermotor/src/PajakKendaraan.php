@@ -17,24 +17,58 @@ class PajakKendaraan
     return $informasi->getInformasiBiayaAdministrasi();
   }
 
-  // public static function informasiPresentasePajak($tipeKendaraan)
-  // {
-  //   if ($tipeKendaraan == "motor") {
-  //     $factory = new MotorFactory;
-  //   } else if ($tipeKendaraan == "mobil") {
-  //     $factory = new MobilFactory;
-  //   }
+  public static function informasiPresentasePajak($tipeKendaraan)
+  {
+    if ($tipeKendaraan == "motor") {
+      $factory = new MotorFactory;
+    } else if ($tipeKendaraan == "mobil") {
+      $factory = new MobilFactory;
+    }
 
-  //   $informasi = $factory->informasiPresentasePajak();
-  //   return $informasi->getInformasiPresentasePajak();
-  // }
+    $informasi = $factory->informasiPresentasePajak();
+    return $informasi->getInformasiPresentasePajak();
+  }
 
   // Pajak
 
+  public function pajakTahunPertama($tipeKendaraan, $nilaiJualKendaraan)
+  {
+    if ($tipeKendaraan == "motor") {
+      $factory = new MotorFactory;
+    } else if ($tipeKendaraan == "mobil") {
+      $factory = new MobilFactory;
+    }
 
+    $pajak = $factory->pajakTahunPertama();
+    return $pajak->getPajakTahunPertama($nilaiJualKendaraan);
+  }
 
+  public function pajakSatuTahunan($tipeKendaraan, $nilaiJualKendaraan)
+  {
+    if ($tipeKendaraan == "motor") {
+      $factory = new MotorFactory;
+    } else if ($tipeKendaraan == "mobil") {
+      $factory = new MobilFactory;
+    }
 
-  public static  function dendaSatuBulan($tipeKendaraan, $nilaiJualKendaraan)
+    $pajak = $factory->pajakSatuTahunan();
+    return $pajak->getPajakSatuTahunan($nilaiJualKendaraan);
+  }
+
+  public function pajakLimaTahun($tipeKendaraan, $nilaiJualKendaraan)
+  {
+    if ($tipeKendaraan == "motor") {
+      $factory = new MotorFactory;
+    } else if ($tipeKendaraan == "mobil") {
+      $factory = new MobilFactory;
+    }
+
+    $pajak = $factory->pajakLimaTahun();
+    return $pajak->getPajakLimaTahunan($nilaiJualKendaraan);
+  }
+
+  // Denda
+  public static function dendaSatuBulan($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -46,7 +80,7 @@ class PajakKendaraan
     return $denda->getDendaSatuBulan($nilaiJualKendaraan);
   }
 
-  public static  function dendaDuaBulan($tipeKendaraan, $nilaiJualKendaraan)
+  public static function dendaDuaBulan($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -58,7 +92,7 @@ class PajakKendaraan
     return $denda->getDendaDuaBulan($nilaiJualKendaraan);
   }
 
-  public static  function dendaEnamBulan($tipeKendaraan, $nilaiJualKendaraan)
+  public static function dendaEnamBulan($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -70,7 +104,7 @@ class PajakKendaraan
     return $denda->getDendaEnamBulan($nilaiJualKendaraan);
   }
 
-  public static  function dendaSatuTahun($tipeKendaraan, $nilaiJualKendaraan)
+  public static function dendaSatuTahun($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -82,7 +116,7 @@ class PajakKendaraan
     return $denda->getDendaSatuTahun($nilaiJualKendaraan);
   }
 
-  public static  function dendaDuaTahun($tipeKendaraan, $nilaiJualKendaraan)
+  public static function dendaDuaTahun($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
