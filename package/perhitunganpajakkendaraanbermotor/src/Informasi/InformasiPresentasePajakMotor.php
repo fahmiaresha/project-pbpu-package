@@ -11,8 +11,9 @@ class InformasiPresentasePajakMotor implements Informasi
     $this->InformasiPresentasePajak = nl2br("
             Informasi Presentase Pajak Motor
             ---------------------------------------
-            2. PKB: 2% nilai jual motor (NJKB)
+            Tahun Pertama
             1. BBN KB: 10% harga jual motor
+            2. PKB: 2% nilai jual motor (NJKB)
             
             Setelah Tahun Pertama
             1. PKB: 2% nilai jual motor (NJKB)
