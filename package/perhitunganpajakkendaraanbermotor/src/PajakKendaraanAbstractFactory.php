@@ -14,7 +14,7 @@ interface PajakKendaraanAbstractFactory
   // Pajak
   public function pajakTahunPertama(): Pajak;
   public function pajakSatuTahunan(): Pajak;
-  public function pajakLimaTahun(): Pajak;
+  public function pajakLimaTahunan(): Pajak;
 
   // Denda
   public function dendaSatuBulan(): DendaSatuBulan;

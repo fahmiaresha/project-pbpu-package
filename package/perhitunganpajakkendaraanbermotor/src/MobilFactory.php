@@ -43,7 +43,7 @@ class MobilFactory implements PajakKendaraanAbstractFactory
     return new PajakSatuTahunanMobil();
   }
 
-  public function pajakLimaTahun(): Pajak
+  public function pajakLimaTahunan(): Pajak
   {
     return new PajakLimaTahunanMobil();
   }

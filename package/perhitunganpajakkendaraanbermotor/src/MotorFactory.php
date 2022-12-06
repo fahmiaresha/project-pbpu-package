@@ -42,7 +42,7 @@ class MotorFactory implements PajakKendaraanAbstractFactory
     return new PajakSatuTahunanMotor();
   }
 
-  public function pajakLimaTahun(): Pajak
+  public function pajakLimaTahunan(): Pajak
   {
     return new PajakLimaTahunanMotor();
   }

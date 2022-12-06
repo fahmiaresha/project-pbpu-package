@@ -39,8 +39,38 @@ Route::get('/informasi-presentase-pajak/{parameter}', function () {
   echo $informasi;
 });
 
-Route::get('/pajak', function () {
-  $motor = PerhitunganPajakKendaranBermotor\PajakKendaraan::denda(5000);
+Route::get('/pajak/tahun-pertama/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $pajak = PerhitunganPajakKendaranBermotor\PajakKendaraan::pajakTahunPertama($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $pajak = PerhitunganPajakKendaranBermotor\PajakKendaraan::pajakTahunPertama($param, $nilaiJualKendaraan);
+  }
 
-  echo $motor;
+  echo $pajak;
+});
+
+Route::get('/pajak/tahun-satu-tahunan/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $pajak = PerhitunganPajakKendaranBermotor\PajakKendaraan::pajakSatuTahunan($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $pajak = PerhitunganPajakKendaranBermotor\PajakKendaraan::pajakSatuTahunan($param, $nilaiJualKendaraan);
+  }
+
+  echo $pajak;
+});
+
+Route::get('/pajak/tahun-lima-tahunan/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $pajak = PerhitunganPajakKendaranBermotor\PajakKendaraan::pajakLimaTahunan($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $pajak = PerhitunganPajakKendaranBermotor\PajakKendaraan::pajakLimaTahunan($param, $nilaiJualKendaraan);
+  }
+
+  echo $pajak;
 });

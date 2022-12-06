@@ -31,7 +31,7 @@ class PajakKendaraan
 
   // Pajak
 
-  public function pajakTahunPertama($tipeKendaraan, $nilaiJualKendaraan)
+  public static function pajakTahunPertama($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -43,7 +43,7 @@ class PajakKendaraan
     return $pajak->getPajakTahunPertama($nilaiJualKendaraan);
   }
 
-  public function pajakSatuTahunan($tipeKendaraan, $nilaiJualKendaraan)
+  public static function pajakSatuTahunan($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -55,7 +55,7 @@ class PajakKendaraan
     return $pajak->getPajakSatuTahunan($nilaiJualKendaraan);
   }
 
-  public function pajakLimaTahun($tipeKendaraan, $nilaiJualKendaraan)
+  public static function pajakLimaTahun($tipeKendaraan, $nilaiJualKendaraan)
   {
     if ($tipeKendaraan == "motor") {
       $factory = new MotorFactory;
@@ -63,7 +63,7 @@ class PajakKendaraan
       $factory = new MobilFactory;
     }
 
-    $pajak = $factory->pajakLimaTahun();
+    $pajak = $factory->pajakLimaTahunan();
     return $pajak->getPajakLimaTahunan($nilaiJualKendaraan);
   }
 
