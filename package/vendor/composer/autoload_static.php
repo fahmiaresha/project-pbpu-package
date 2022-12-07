@@ -4,32 +4,33 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd7e660f6813393cd28099c7d6f5c94e1
+class ComposerStaticInit3d47f49882f7cbd2c2373da91fd99a43
 {
-  public static $prefixLengthsPsr4 = array(
-    'F' =>
-    array(
-      'FA\\PerhitunganPajakKendaranBermotor\\' => 37,
-    ),
-  );
+    public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Syfmi\\Perhitunganpajakkendaraanbermotor\\' => 40,
+        ),
+    );
 
-  public static $prefixDirsPsr4 = array(
-    'FA\\PerhitunganPajakKendaranBermotor\\' =>
-    array(
-      0 => __DIR__ . '/../..' . '/src',
-    ),
-  );
+    public static $prefixDirsPsr4 = array (
+        'Syfmi\\Perhitunganpajakkendaraanbermotor\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
 
-  public static $classMap = array(
-    'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-  );
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
 
-  public static function getInitializer(ClassLoader $loader)
-  {
-    return \Closure::bind(function () use ($loader) {
-      $loader->prefixLengthsPsr4 = ComposerStaticInitd7e660f6813393cd28099c7d6f5c94e1::$prefixLengthsPsr4;
-      $loader->prefixDirsPsr4 = ComposerStaticInitd7e660f6813393cd28099c7d6f5c94e1::$prefixDirsPsr4;
-      $loader->classMap = ComposerStaticInitd7e660f6813393cd28099c7d6f5c94e1::$classMap;
-    }, null, ClassLoader::class);
-  }
+    public static function getInitializer(ClassLoader $loader)
+    {
+        return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3d47f49882f7cbd2c2373da91fd99a43::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3d47f49882f7cbd2c2373da91fd99a43::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3d47f49882f7cbd2c2373da91fd99a43::$classMap;
+
+        }, null, ClassLoader::class);
+    }
 }

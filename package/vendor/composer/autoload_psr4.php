@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-  'FA\\PerhitunganPajakKendaranBermotor\\' => array($baseDir . '/src'),
+    'Syfmi\\Perhitunganpajakkendaraanbermotor\\' => array($baseDir . '/src'),
 );

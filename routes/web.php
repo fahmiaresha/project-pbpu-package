@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use PerhitunganPajakKendaranBermotor\PajakKendaraan;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,9 @@ Route::get('/', function () {
 Route::get('/informasi-biaya-administrasi/{parameter}', function () {
   $param = request('parameter');
   if ($param == "motor") {
-    $informasi = PerhitunganPajakKendaranBermotor\PajakKendaraan::informasiBiayaAdministrasi($param);
+    $informasi = PajakKendaraan::informasiBiayaAdministrasi($param);
   } else if ($param == "mobil") {
-    $informasi = PerhitunganPajakKendaranBermotor\PajakKendaraan::informasiBiayaAdministrasi($param);
+    $informasi = PajakKendaraan::informasiBiayaAdministrasi($param);
   }
 
   echo $informasi;
