@@ -28,7 +28,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "PerhitunganPajakKendaranBermotor\\": "package/perhitunganpajakkendaraanbermotor/src"
+            "PerhitunganPajakKendaranBermotor\\": "package/Perhitunganpajakkendaraanbermotor/src"
         }
     },
     "autoload-dev": {
