@@ -2,6 +2,9 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
+require "../PajakUtil.php";
+require "../BiayaAdministrasi.php";
+
 class DendaSatuTahunMotor implements DendaSatuTahun
 {
   public function getDendaSatuTahun(float $nilaiJualKendaraan): string

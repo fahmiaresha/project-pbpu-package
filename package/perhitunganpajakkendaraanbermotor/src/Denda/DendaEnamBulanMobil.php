@@ -2,6 +2,9 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
+require "../PajakUtil.php";
+require "../BiayaAdministrasi.php";
+
 class DendaEnamBulanMobil implements DendaEnamBulan
 {
   public function getDendaEnamBulan(float $nilaiJualKendaraan): string

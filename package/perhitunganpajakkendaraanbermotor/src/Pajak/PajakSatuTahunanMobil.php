@@ -2,7 +2,10 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-class PajakSatuTahunanMobil implements Pajak
+require "../PajakUtil.php";
+require "../BiayaAdministrasi.php";
+
+class PajakSatuTahunanMobil implements PajakSatuTahunan
 {
   private $swdkllj;
   private $biayaAdministrasi;
@@ -19,15 +22,5 @@ class PajakSatuTahunanMobil implements Pajak
     $jumlahPajak = $pkb + $this->swdkllj + $this->biayaAdministrasi;
 
     return $jumlahPajak;
-  }
-
-  public function getPajakTahunPertama(float $nilaiJualKendaraan)
-  {
-    return null;
-  }
-
-  public function getPajakLimaTahunan(float $nilaiJualKendaraan)
-  {
-    return null;
   }
 }

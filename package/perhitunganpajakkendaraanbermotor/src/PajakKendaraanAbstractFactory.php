@@ -5,13 +5,13 @@ namespace PerhitunganPajakKendaranBermotor;
 interface PajakKendaraanAbstractFactory
 {
   // Informasi
-  public function informasiBiayaAdministrasi(): Informasi;
-  public function informasiPresentasePajak(): Informasi;
+  public function informasiBiayaAdministrasi(): InformasiBiayaAdministrasi;
+  public function informasiPresentasePajak(): InformasiPresentasePajak;
 
   // Pajak
-  public function pajakTahunPertama(): Pajak;
-  public function pajakSatuTahunan(): Pajak;
-  public function pajakLimaTahunan(): Pajak;
+  public function pajakTahunPertama(): PajakTahunPertama;
+  public function pajakSatuTahunan(): PajakSatuTahunan;
+  public function pajakLimaTahunan(): PajakLimaTahunan;
 
   // Denda
   public function dendaSatuBulan(): DendaSatuBulan;

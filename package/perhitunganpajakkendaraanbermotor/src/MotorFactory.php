@@ -21,28 +21,28 @@ require "Denda/DendaDuaTahunMotor.php";
 class MotorFactory implements PajakKendaraanAbstractFactory
 {
   // Informasi
-  public function informasiBiayaAdministrasi(): Informasi
+  public function informasiBiayaAdministrasi(): InformasiBiayaAdministrasi
   {
     return new InformasiBiayaAdministrasiMotor();
   }
 
-  public function informasiPresentasePajak(): Informasi
+  public function informasiPresentasePajak(): InformasiPresentasePajak
   {
     return new InformasiPresentasePajakMotor();
   }
 
   // Pajak
-  public function pajakTahunPertama(): Pajak
+  public function pajakTahunPertama(): PajakTahunPertama
   {
     return new PajakTahunPertamaMotor();
   }
 
-  public function pajakSatuTahunan(): Pajak
+  public function pajakSatuTahunan(): PajakSatuTahunan
   {
     return new PajakSatuTahunanMotor();
   }
 
-  public function pajakLimaTahunan(): Pajak
+  public function pajakLimaTahunan(): PajakLimaTahunan
   {
     return new PajakLimaTahunanMotor();
   }

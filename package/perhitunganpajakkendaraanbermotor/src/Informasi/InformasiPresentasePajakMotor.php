@@ -2,7 +2,7 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-class InformasiPresentasePajakMotor implements Informasi
+class InformasiPresentasePajakMotor implements InformasiPresentasePajak
 {
   private $InformasiPresentasePajak;
 
@@ -26,10 +26,5 @@ class InformasiPresentasePajakMotor implements Informasi
   public function getInformasiPresentasePajak()
   {
     echo $this->InformasiPresentasePajak;
-  }
-
-  public function getInformasiBiayaAdministrasi()
-  {
-    return null;
   }
 }

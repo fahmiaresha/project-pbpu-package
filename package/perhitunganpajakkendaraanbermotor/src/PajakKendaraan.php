@@ -40,7 +40,7 @@ class PajakKendaraan
     }
 
     $pajak = $factory->pajakTahunPertama();
-    return $pajak->getPajakTahunPertama($nilaiJualKendaraan);
+    return ' $pajak->getPajakTahunPertama($nilaiJualKendaraan)';
   }
 
   public static function pajakSatuTahunan($tipeKendaraan, $nilaiJualKendaraan)

@@ -2,9 +2,7 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-interface Informasi
+interface InformasiBiayaAdministrasi
 {
   public function getInformasiBiayaAdministrasi();
-
-  public function getInformasiPresentasePajak();
 }

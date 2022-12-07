@@ -22,28 +22,28 @@ require "Denda/DendaDuaTahunMobil.php";
 class MobilFactory implements PajakKendaraanAbstractFactory
 {
   // Infotmasi
-  public function informasiBiayaAdministrasi(): Informasi
+  public function informasiBiayaAdministrasi(): InformasiBiayaAdministrasi
   {
     return new InformasiBiayaAdministrasiMobil();
   }
 
-  public function informasiPresentasePajak(): Informasi
+  public function informasiPresentasePajak(): InformasiPresentasePajak
   {
     return new InformasiPresentasePajakMobil();
   }
 
   // Pajak
-  public function pajakTahunPertama(): Pajak
+  public function pajakTahunPertama(): PajakTahunPertama
   {
     return new PajakTahunPertamaMobil();
   }
 
-  public function pajakSatuTahunan(): Pajak
+  public function pajakSatuTahunan(): PajakSatuTahunan
   {
     return new PajakSatuTahunanMobil();
   }
 
-  public function pajakLimaTahunan(): Pajak
+  public function pajakLimaTahunan(): PajakLimaTahunan
   {
     return new PajakLimaTahunanMobil();
   }
