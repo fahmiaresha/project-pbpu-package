@@ -37,4 +37,3 @@ class PajakLimaTahunanMotor implements Pajak
     return null;
   }
 }
-}
