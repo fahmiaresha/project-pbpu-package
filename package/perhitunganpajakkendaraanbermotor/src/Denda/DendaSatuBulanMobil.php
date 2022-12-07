@@ -11,8 +11,6 @@ class DendaSatuBulanMobil implements DendaSatuBulan
 
     $totalDenda = $pkb * 0.25;
 
-    $formatText = number_format($totalDenda);
-
-    return $formatText;
+    return $totalDenda;
   }
 }

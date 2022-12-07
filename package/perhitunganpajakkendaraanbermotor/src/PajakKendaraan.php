@@ -7,9 +7,9 @@ class PajakKendaraan
   // Denda
   public static function informasiBiayaAdministrasi($tipeKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -19,9 +19,9 @@ class PajakKendaraan
 
   public static function informasiPresentasePajak($tipeKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -33,9 +33,9 @@ class PajakKendaraan
 
   public static function pajakTahunPertama($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -45,9 +45,9 @@ class PajakKendaraan
 
   public static function pajakSatuTahunan($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -55,11 +55,11 @@ class PajakKendaraan
     return $pajak->getPajakSatuTahunan($nilaiJualKendaraan);
   }
 
-  public static function pajakLimaTahun($tipeKendaraan, $nilaiJualKendaraan)
+  public static function pajakLimaTahunan($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -70,9 +70,9 @@ class PajakKendaraan
   // Denda
   public static function dendaSatuBulan($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -82,9 +82,9 @@ class PajakKendaraan
 
   public static function dendaDuaBulan($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -94,9 +94,9 @@ class PajakKendaraan
 
   public static function dendaEnamBulan($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -106,9 +106,9 @@ class PajakKendaraan
 
   public static function dendaSatuTahun($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 
@@ -118,9 +118,9 @@ class PajakKendaraan
 
   public static function dendaDuaTahun($tipeKendaraan, $nilaiJualKendaraan)
   {
-    if ($tipeKendaraan == "motor") {
+    if (strtolower($tipeKendaraan) == "motor") {
       $factory = new MotorFactory;
-    } else if ($tipeKendaraan == "mobil") {
+    } else if (strtolower($tipeKendaraan) == "mobil") {
       $factory = new MobilFactory;
     }
 

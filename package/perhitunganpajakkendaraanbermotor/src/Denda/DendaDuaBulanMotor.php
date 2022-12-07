@@ -10,10 +10,8 @@ class DendaDuaBulanMotor implements DendaDuaBulan
     $pkb = PajakUtil::hitungPKBMotor($nilaiJualKendaraan);
     $swdkllj = BiayaAdministrasi::swdklljMotor();
 
-    $totalDenda = ((($pkb * 0.25) * 2) / 12) + $swdkllj;
+    $totalDenda = ((($pkb * 0.25) * 3) / 12) + $swdkllj;
 
-    $formatText = number_format($totalDenda);
-
-    return $formatText;
+    return $totalDenda;
   }
 }

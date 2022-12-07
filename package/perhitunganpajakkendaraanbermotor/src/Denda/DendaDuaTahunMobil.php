@@ -12,8 +12,6 @@ class DendaDuaTahunMobil implements DendaDuaTahun
 
     $totalDenda = (((($pkb * 0.25) * 2) * 12) / 12) + $swdkllj;
 
-    $formatText = number_format($totalDenda);
-
-    return $formatText;
+    return $totalDenda;
   }
 }

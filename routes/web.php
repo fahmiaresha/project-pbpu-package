@@ -51,7 +51,7 @@ Route::get('/pajak/tahun-pertama/{parameter}/{nilai}', function () {
   echo $pajak;
 });
 
-Route::get('/pajak/tahun-satu-tahunan/{parameter}/{nilai}', function () {
+Route::get('/pajak/satu-tahunan/{parameter}/{nilai}', function () {
   $param = request('parameter');
   $nilaiJualKendaraan = request('nilai');
   if ($param == "motor") {
@@ -63,7 +63,7 @@ Route::get('/pajak/tahun-satu-tahunan/{parameter}/{nilai}', function () {
   echo $pajak;
 });
 
-Route::get('/pajak/tahun-lima-tahunan/{parameter}/{nilai}', function () {
+Route::get('/pajak/lima-tahunan/{parameter}/{nilai}', function () {
   $param = request('parameter');
   $nilaiJualKendaraan = request('nilai');
   if ($param == "motor") {
@@ -73,4 +73,65 @@ Route::get('/pajak/tahun-lima-tahunan/{parameter}/{nilai}', function () {
   }
 
   echo $pajak;
+});
+
+Route::get('/pajak/denda-satu-bulan/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaSatuBulan($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaSatuBulan($param, $nilaiJualKendaraan);
+  }
+
+  echo $denda;
+});
+
+
+Route::get('/pajak/denda-dua-bulan/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaDuaBulan($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaDuaBulan($param, $nilaiJualKendaraan);
+  }
+
+  echo $denda;
+});
+
+Route::get('/pajak/denda-enam-bulan/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaEnamBulan($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaEnamBulan($param, $nilaiJualKendaraan);
+  }
+
+  echo $denda;
+});
+
+Route::get('/pajak/denda-satu-tahun/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaSatuTahun($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaSatuTahun($param, $nilaiJualKendaraan);
+  }
+
+  echo $denda;
+});
+
+Route::get('/pajak/denda-dua-tahun/{parameter}/{nilai}', function () {
+  $param = request('parameter');
+  $nilaiJualKendaraan = request('nilai');
+  if ($param == "motor") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaDuaTahun($param, $nilaiJualKendaraan);
+  } else if ($param == "mobil") {
+    $denda = PerhitunganPajakKendaranBermotor\PajakKendaraan::dendaDuaTahun($param, $nilaiJualKendaraan);
+  }
+
+  echo $denda;
 });

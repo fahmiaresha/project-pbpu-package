@@ -19,10 +19,9 @@ class PajakLimaTahunanMotor implements Pajak
     $this->biayaAdministrasiTNKB = BiayaAdministrasi::penerbitanTnkbMotor();
   }
 
-
   public function getPajakLimaTahunan(float $nilaiJualKendaraan)
   {
-    $pkb = PajakUtil::hitungPKBMotor($this->nilaiJualMotor);
+    $pkb = PajakUtil::hitungPKBMotor($nilaiJualKendaraan);
     $jumlahPajak = $pkb + $this->swdkllj + $this->biayaAdministrasi + $this->biayaAdministrasiPenerbitanSTNK + $this->biayaAdministrasiPengesahanSTNK + $this->biayaAdministrasiTNKB;
 
     return $jumlahPajak;
