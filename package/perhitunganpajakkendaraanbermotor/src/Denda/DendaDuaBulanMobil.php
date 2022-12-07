@@ -2,9 +2,6 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-require "../PajakUtil.php";
-require "../BiayaAdministrasi.php";
-
 class DendaDuaBulanMobil implements DendaDuaBulan
 {
   public function getDendaDuaBulan(float $nilaiJualKendaraan)

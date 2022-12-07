@@ -2,9 +2,6 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-require "../PajakUtil.php";
-require "../BiayaAdministrasi.php";
-
 class PajakTahunPertamaMobil implements PajakTahunPertama
 {
   private $swdkllj;

@@ -2,8 +2,6 @@
 
 namespace PerhitunganPajakKendaranBermotor;
 
-require "../PajakUtil.php";
-require "../BiayaAdministrasi.php";
 
 class DendaDuaTahunMobil implements DendaDuaTahun
 {
