@@ -24,3 +24,4 @@ class PajakUtil
     return $hargaJualMotor * 0.02;
   }
 }
+}
